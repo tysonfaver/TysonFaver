@@ -1,0 +1,27 @@
+using System;
+
+class taxMath {
+  public static void Main () {
+    Console.WriteLine ("Please enter your gross annual income to the highest dollar");
+    double taxOwed1, incomeNum;
+    incomeInpt = Console.ReadLine ();
+    incomeNum = double.parse(incomeInpt);
+
+    maritalStatus = Console.ReadLine ();
+
+  if ()
+      if (incomeNum <= 9700) {
+    Console.WriteLine ( "You are in the 10% tax bracket" ) ;
+     taxOwed1 = (incomeNum * .10 );
+    Console.WriteLine ("You will have to pay" + taxOwed1 + " dollars in taxes");
+      }
+
+      if (9700 < incomeNum < 39,475 ) {
+    Console.WriteLine ( "You are in the 12% tax bracket" ) ;
+     taxOwed1 = (incomeNum * .12 );
+    Console.WriteLine ("You will have to pay" + taxOwed1 + " dollars in taxes");
+    }
+    if (9700 < incomeNum < 39,475 ) {
+    Console.WriteLine ( "You are in the 12% tax bracket" ) ;
+    taxOwed1 = (incomeNum * .12 );
+    Console.WriteLine ("You will have to pay" + taxOwed1 + " dollars in taxes");
