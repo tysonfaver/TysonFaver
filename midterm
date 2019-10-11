@@ -1,0 +1,65 @@
+using System;
+
+class Pig {
+  public static void Main () {
+
+    int n, PlayerRollR, CpmRollR;
+    string playerResponse;
+
+
+    int [] playerRoll = new int [1000] ;
+    int [] CpmRoll = new int [1000] ;
+    PlayerRollR = 0;
+    CpmRollR = 0;
+
+
+    Random RandomNumberCpm = new Random();
+    Random RandomNumberPlr = new Random();
+
+
+  Console.WriteLine("Would you like to play pig?");
+    playerResponse = Console.ReadLine();
+    while (playerResponse == "yes")
+    {
+      for (n=2; PlayerRollR <= 100 || CpmRollR <=100; n++){
+
+
+
+      playerRoll [n] = RandomNumberCpm.Next(1,7);
+
+
+      CpmRoll [n] = RandomNumberPlr.Next(1,7);
+
+      PlayerRollR = playerRoll [n] + PlayerRollR;
+
+
+      CpmRollR = CpmRoll [n] + CpmRollR;
+
+      Console.WriteLine("Your number is "+ PlayerRollR + " and your opponents number is " + CpmRollR + " would you like to contine yes or no?");
+
+
+
+
+
+
+  if (PlayerRollR >= 100)
+    {
+       Console.WriteLine("congratulations you won");
+       break;
+      }
+    else if (CpmRollR >= 100)
+    {
+      Console.WriteLine("Sorry you lose");
+      break;
+    }
+    else
+    {
+     playerResponse = Console.ReadLine();
+      continue;
+    }
+
+      }
+
+    }
+    }
+  }
