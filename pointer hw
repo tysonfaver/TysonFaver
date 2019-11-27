@@ -1,0 +1,37 @@
+using System;
+
+class MainClass {
+
+public static void Main () {
+//opens an array of five variables set at the givin values
+int[] a = new int[5] { 10, 20, 30, 40, 50 };
+ 
+unsafe
+{
+ // points p to the variable a[0]'s address and asigns pointer P2 as 10.. prints 10
+fixed (int* p = &a[0])
+{
+int* p2 = p;
+Console.WriteLine(*p2);
+ 
+// adds 1 to p2 and prints 11
+p2 += 1;
+Console.WriteLine(*p2);
+// adds 1 to p2 again and prints 13 ------- 10
+p2 += 1;
+Console.WriteLine(*p2);
+Console.WriteLine("--------");
+Console.WriteLine(*p);
+ // prints 11 them 12 by adding one to the address of a[0]
+*p += 1;
+Console.WriteLine(*p);
+*p += 1;
+Console.WriteLine(*p);
+}
+}
+//print ------ then the
+Console.WriteLine("--------");
+Console.WriteLine(a[0]);
+}
+
+}
